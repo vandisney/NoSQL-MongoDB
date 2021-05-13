@@ -3,10 +3,10 @@ Esse repositório tem como objetivo demonstrar uma prática utilizando o banco d
 * Prática realizada em docker.
 
 ### ✍️ 1- Criar o banco de dados com seu nome.
-  * Para resolução dessa questão, será necessária algunas etapas:
+  * Para resolução dessa questão, será necessária algunas etapas: </br>
   1- Para isso é necessário primeiramente iniciar o mongodb através do docker-compose sob o comando: `docker-compose up -d`.
  ![imagem1](https://github.com/vandisney/NoSQL-MongoDB/blob/main/imagens/imagem1.png)
-  2- Para acesso ao terminal do mongodb, usamos o comando: `docker exec -it mongo bash` e depois o `mongo`
+  2- Para acesso ao terminal do mongodb, usamos o comando: `docker exec -it mongo bash` e depois o `mongo`.
  ![imagem2](https://github.com/vandisney/NoSQL-MongoDB/blob/main/imagens/imagem2.png)
  * O mongo Express `http://localhost:8081/`- é a interface gráfica de acesso ao mongo do docker.
  ![localhost](https://github.com/vandisney/NoSQL-MongoDB/blob/main/imagens/localhost.jpg)
@@ -19,27 +19,28 @@ Esse repositório tem como objetivo demonstrar uma prática utilizando o banco d
 * Criação da collections com o comando: `db.createCollection('produto')`
 ![imagem5](https://github.com/vandisney/NoSQL-MongoDB/blob/main/imagens/imagem5.png)
 
- ### ✍️ 3- Listar as collections.
+### ✍️ 3- Listar as collections.
   Para isso damos um `show collections`
   ![imagem6](https://github.com/vandisney/NoSQL-MongoDB/blob/main/imagens/imagem6.png)
- 
- ### ✍️ 4- Inserir os seguintes documentos na collection produto.
-      <p>
-     _id: 1, "nome": “cpu i5", "qtd": "15“ </br>
-     _id: 2, nome: “memória ram", qtd: 10, descricao: {armazenamento: “8GB”, tipo:“DDR4“}</br>
-     _id: 3, nome: "mouse", qtd: 50, descricao: {conexao: “USB”, so: [“Windows”, “Mac”, “Linux“]}</br>
-     _id: 4, nome: “hd externo", "qtd": 20, descricao: {conexao: “USB”, armazenamento: “500GB”, so:[“Windows 10”, “Windows 8”, “Windows 7”]}</br>
-</p>
+
+### ✍️ 4- Inserir os seguintes documentos na collection produto.
+  <p>
+  _id: 1, "nome": “cpu i5", "qtd": "15“ </br>
+  _id: 2, nome: “memória ram", qtd: 10, descricao: {armazenamento: “8GB”, tipo:“DDR4“}</br>
+  _id: 3, nome: "mouse", qtd: 50, descricao: {conexao: “USB”, so: [“Windows”, “Mac”, “Linux“]}</br>
+  _id: 4, nome: “hd externo", "qtd": 20, descricao: {conexao: “USB”, armazenamento: “500GB”, so:[“Windows 10”, “Windows 8”, “Windows 7”]}</br>
+  </p>
 * A inserção foi possível através do comando abaixo:
-<p>
- > db.produto.insertOne({_id: 1, "nome": "cpu i5", "qtd": "15"})</br>
-{ "acknowledged" : true, "insertedId" : 1 }</br>
-> db.produto.insertOne({_id: 2, nome: "memória ram", qtd: 10, descricao: {armazenamento: "8GB", tipo:"DDR4"}})</br>
-{ "acknowledged" : true, "insertedId" : 2 }</br>
-> db.produto.insertOne({_id: 3, nome: "mouse", qtd: 50, descricao: {conexao: "USB", so: ["Windows", "Mac", "Linux"]}})</br>
-{ "acknowledged" : true, "insertedId" : 3 }</br>
-> db.produto.insertOne({_id: 4, nome: "hd externo", "qtd": 20, descricao: {conexao: "USB", armazenamento: "500GB", so: ["Windows 10", "Windows 8", "Windows 7"]}})</br>
-{ "acknowledged" : true, "insertedId" : 4 }</br>
-</p>
+  <p>
+   > db.produto.insertOne({_id: 1, "nome": "cpu i5", "qtd": "15"})</br>
+  { "acknowledged" : true, "insertedId" : 1 }</br>
+  > db.produto.insertOne({_id: 2, nome: "memória ram", qtd: 10, descricao: {armazenamento: "8GB", tipo:"DDR4"}})</br>
+  { "acknowledged" : true, "insertedId" : 2 }</br>
+  > db.produto.insertOne({_id: 3, nome: "mouse", qtd: 50, descricao: {conexao: "USB", so: ["Windows", "Mac", "Linux"]}})</br>
+  { "acknowledged" : true, "insertedId" : 3 }</br>
+  > db.produto.insertOne({_id: 4, nome: "hd externo", "qtd": 20, descricao: {conexao: "USB", armazenamento: "500GB", </br>
+  so: ["Windows 10", "Windows 8", "Windows 7"]}})</br>
+  { "acknowledged" : true, "insertedId" : 4 }</br>
+  </p>
 
 ![imagem7](https://github.com/vandisney/NoSQL-MongoDB/blob/main/imagens/imagem7.png)
