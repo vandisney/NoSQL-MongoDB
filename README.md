@@ -13,7 +13,7 @@ Esse repositório tem como objetivo demonstrar uma prática utilizando o banco d
   3- Nessa etapa já podemos atender a questão, para isso podemos criar o banco de dados com o comando: `use nomedobanco`.
  ![imagem3](https://github.com/vandisney/NoSQL-MongoDB/blob/main/imagens/imagem3.png)
  
- ### ✍️ 2- Listar os banco de dados e criar a collection produto no bd com seu nome.
+### ✍️ 2- Listar os banco de dados e criar a collection produto no bd com seu nome.
   Com o comando: `show dbs` é possível listar os bancos de dados existentes. Conforme a imagem nota-se que o banco de dados criado na questão anterior não foi exibido, para visualizar o banco de dados é necessário incluir um collections - seria uma tabela comparando-se ao banco relacional.
  ![imagem4](https://github.com/vandisney/NoSQL-MongoDB/blob/main/imagens/imagem4.png)
 * Criação da collections com o comando: `db.createCollection('produto')`
@@ -45,15 +45,23 @@ Esse repositório tem como objetivo demonstrar uma prática utilizando o banco d
   * 5.1- Nome = mouse - Realizado através da consulta: `db.produto.find({nome: "mouse"})`
 ![imagem8](https://github.com/vandisney/NoSQL-MongoDB/blob/main/imagens/imagem8.png)
 
-* 5.2- Quantidade = 20 e apresentar apenas o campo nome - Realizado através da consulta: `db.produto.find({qtd: 20},{_id: 0, nome: 1 })`
+* 5.2- Quantidade = 20 e apresentar apenas o campo nome -> Realizado através da consulta: `db.produto.find({qtd: 20},{_id: 0, nome: 1 })`
 ![imgem9](https://github.com/vandisney/NoSQL-MongoDB/blob/main/imagens/imgem9.png)
 
-* 5.3- Quantidade <= 20 e apresentar apenas os campos nome e qtd - Realizado através da consulta: `db.produto.find({qtd: {$lte: 20}},{_id: 0, nome: 1,qtd: 1 })`
+* 5.3- Quantidade <= 20 e apresentar apenas os campos nome e qtd -> Realizado através da consulta: `db.produto.find({qtd: {$lte: 20}},{_id: 0, nome: 1,qtd: 1 })`
 ![imagem10](https://github.com/vandisney/NoSQL-MongoDB/blob/main/imagens/imagem10.png)
 
-* 5.4- Quantidade entre 10 e 20 - Realizado através da consulta: `db.produto.find({qtd: {$gte: 10, $lte: 20}})`
+* 5.4- Quantidade entre 10 e 20 -> Realizado através da consulta: `db.produto.find({qtd: {$gte: 10, $lte: 20}})`
 > Para esse questão foi consultado primeiramente a qtd maior que 10 sob o comando: `db.produto.find({qtd: {$gte: 10}})` e, segundo a imagem foi observado o item: 3 retorna a qtd: 50, porém este item não foi retornado na consulta que atendeu a questão, validando a consulta.
 ![imagem11](https://github.com/vandisney/NoSQL-MongoDB/blob/main/imagens/imagm11.png)
+
+### ✍️ 6- Conexão = USB e não apresentar o campo _id e qtd -> Realizado através da consulta: `db.produto.find({"descricao.conexao": "USB"},{_id: 0,qtd: 0})`
+  * 5.1- Nome = mouse - Realizado através da consulta: `db.produto.find({nome: "mouse"})`
+![imagem12](https://github.com/vandisney/NoSQL-MongoDB/blob/main/imagens/imagem12.png)
+
+### ✍️ 7- SO que contenha “Windows” ou “Windows 10” -> Realizado através da consulta: `db.produto.find({"descricao.so":{$in: ["Windows","Windows 10"]}})`
+ ![imagem13](https://github.com/vandisney/NoSQL-MongoDB/blob/main/imagens/imagem13.png)
+
 
 
 
