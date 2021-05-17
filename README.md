@@ -33,14 +33,10 @@ Esse repositório tem como objetivo demonstrar uma prática utilizando o banco d
 * A inserção foi possível através do comando abaixo:
   <p>
    > db.produto.insertOne({_id: 1, "nome": "cpu i5", "qtd": "15"})</br>
-  { "acknowledged" : true, "insertedId" : 1 }</br>
-  > db.produto.insertOne({_id: 2, nome: "memória ram", qtd: 10, descricao: {armazenamento: "8GB", tipo:"DDR4"}})</br>
-  { "acknowledged" : true, "insertedId" : 2 }</br>
-  > db.produto.insertOne({_id: 3, nome: "mouse", qtd: 50, descricao: {conexao: "USB", so: ["Windows", "Mac", "Linux"]}})</br>
-  { "acknowledged" : true, "insertedId" : 3 }</br>
-  > db.produto.insertOne({_id: 4, nome: "hd externo", "qtd": 20, descricao: {conexao: "USB", armazenamento: "500GB", </br>
+   > db.produto.insertOne({_id: 2, nome: "memória ram", qtd: 10, descricao: {armazenamento: "8GB", tipo:"DDR4"}})</br>
+   > db.produto.insertOne({_id: 3, nome: "mouse", qtd: 50, descricao: {conexao: "USB", so: ["Windows", "Mac", "Linux"]}})</br>
+   > db.produto.insertOne({_id: 4, nome: "hd externo", "qtd": 20, descricao: {conexao: "USB", armazenamento: "500GB", </br>
   so: ["Windows 10", "Windows 8", "Windows 7"]}})</br>
-  { "acknowledged" : true, "insertedId" : 4 }</br>
   </p>
 
 ![imagem7](https://github.com/vandisney/NoSQL-MongoDB/blob/main/imagens/imagem7.png)
