@@ -40,3 +40,20 @@ Esse repositório tem como objetivo demonstrar uma prática utilizando o banco d
   </p>
 
 ![imagem7](https://github.com/vandisney/NoSQL-MongoDB/blob/main/imagens/imagem7.png)
+
+### ✍️ 5- Pesquisar na collection produto, os documentos com os seguintes atributos:
+  * 5.1- Nome = mouse - Realizado através da consulta: `db.produto.find({nome: "mouse"})`
+![imagem8](https://github.com/vandisney/NoSQL-MongoDB/blob/main/imagens/imagem8.png)
+
+* 5.2- Quantidade = 20 e apresentar apenas o campo nome - Realizado através da consulta: `db.produto.find({qtd: 20},{_id: 0, nome: 1 })`
+![imagem9](https://github.com/vandisney/NoSQL-MongoDB/blob/main/imagens/imagem9.png)
+
+* 5.3- Quantidade <= 20 e apresentar apenas os campos nome e qtd - Realizado através da consulta: `db.produto.find({qtd: {$lte: 20}},{_id: 0, nome: 1,qtd: 1 })`
+![imagem10](https://github.com/vandisney/NoSQL-MongoDB/blob/main/imagens/imagem10.png)
+
+* 5.4- Quantidade entre 10 e 20 - Realizado através da consulta: `db.produto.find({qtd: {$gte: 10, $lte: 20}})`
+> Para esse questão foi consultado primeiramente a qtd maior que 10 sob o comando: `db.produto.find({qtd: {$gte: 10}})` e, segundo a imagem foi observado o item: 3 retorna a qtd: 50, porém este item não foi retornado na consulta que atendeu a questão, validando a consulta.
+![imagem11](https://github.com/vandisney/NoSQL-MongoDB/blob/main/imagens/imagem11.png)
+
+
+
